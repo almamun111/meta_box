@@ -1,0 +1,61 @@
+$student_meta_box = array(
+		'id'			=>	'student_meta_box',
+		'title'			=>	__('শিক্ষার্থী যুক্ত করুন','asian-theme'),
+		'pages'			=>	array('student'),
+		'context'		=>	'normal',
+		'priority'		=>	'high',
+		'fields'		=>	array(
+			array(
+				'label'		=>	__('শিক্ষার্থী যুক্ত করুন','asian-theme'),
+				'id'		=>	'students',
+				'type'		=>	'list-item',
+				'settings'	=>	array(
+					array(
+						'label'		=>	__('শিক্ষার্থীর শাখা','asian-theme'),
+						'id'		=>	'division',
+						'type'		=>	'select',
+						'choices'	=>	array(
+							array(
+								'value'	=>	__('ক', 'asian-theme'),
+								'label'	=>	__('ক-শাখা','asian-theme'),
+							),
+							array(
+								'value'	=>	__('খ', 'asian-theme'),
+								'label'	=>	__('খ - শাখা','asian-theme'),
+							),
+							array(
+								'value'	=>	__('গ', 'asian-theme'),
+								'label'	=>	__('গ - শাখা','asian-theme'),
+							),
+							array(
+								'value'	=>	__('ঘ', 'asian-theme'),
+								'label'	=>	__('ঘ - শাখা','asian-theme'),
+							)
+						)
+					),
+					array(
+					'label' => __('শিক্ষার্থীর রোল', 'asian-theme'),
+					'id' => 'roll',
+					'type' => 'text',
+					)
+				),
+			),
+		)
+	);
+	ot_register_meta_box($student_meta_box);
+ 
+  	$prostudent_meta_box	=	array(
+		'id'			=>	'prostudent_meta_box',
+		'title'			=>	__('কৃতি শিক্ষার্থীর তথ‍্য', 'asian-theme'),
+		'pages'			=>	array('prostudent'),
+		'context'		=>	'normal',
+		'priority'		=>	'high',
+		'fields'		=>	array(
+			array(
+				'label'	=>	__('তথ‍্য','asian-theme'),
+				'id'	=>	'prostudent_why',
+				'type'	=>	'text',
+			),
+		)
+	);
+	ot_register_meta_box($prostudent_meta_box);
